@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+    <title>CSS Test: Background-image applied to element with 'display' set to 'inline'</title>
+		<meta name="flags" content="ahem interact" />
+		<meta name="assert" content="A background-color value other than inherit applied on hover is propagated to multiple vertically-stacked line boxes" />
+		<link rel="author" title="James Hopkins" href="https://github.com/jameshopkins" />
+		<link rel="author" title="Vasil Rangelov" href="https://github.com/boenrobot" />
+		<style type="text/css">
+    	#test{
+    		width:1em;
+    		font-family:Ahem;
+    		border:1px solid black;
+    		font-size:7em;
+    		background:red;
+    	}
+    	span {
+    	  text-decoration:none;
+      }
+      span:hover {
+    	  background-color: green;
+      }
+		</style>
+	</head>
+  <body>
+  	<h1>A background-color value other than inherit applied on hover is intermittently not propagated to multiple vertically-stacked line boxes</h1>
+    <p>Test passes if no red is visible when hovering over the box below.</p>
+  	<div id="test"><span>&nbsp; &nbsp;</span></div>
+	</body>
+</html>

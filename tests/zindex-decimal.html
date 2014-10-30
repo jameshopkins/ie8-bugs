@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>CSS Test: z-index parsing - decimal value</title>
+    <meta name="assert" content="An integer value for z-index must be used" />
+    <style type="text/css">
+      #test {
+        position: relative;
+        height: 20px;
+        font-size: 50px;
+      }
+      #fail {
+        color: red;
+        z-index: 99.9;
+        position: absolute;
+        top: 0;
+        left: 0
+      }
+      #pass {
+        color: green;
+        position: absolute;
+        top: 0;
+        left: 0
+      }
+    </style>
+  </head>
+  <body>
+    <h1>A decimal <code>z-index</code> value is incorrectly used</h1>
+    <div id="test">
+    <span id="fail">This text should be green</span>
+    <span id="pass">This text should be green</span>
+    </div>
+  </body>
+</html>

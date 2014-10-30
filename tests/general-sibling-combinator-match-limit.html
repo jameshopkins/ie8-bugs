@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>CSS Test: General sibling combinator</title>
+    <style type="text/css">
+      #test{
+      	overflow:auto;
+        width: 200px
+      }
+      #test div {
+        background: red;
+        float: left;
+        width: 10px;
+        height: 10px;
+      }
+      #test div:first-child,
+      #test div:first-child ~ div {
+        background: green;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>A general sibling combinator matches only first 298 elements</h1>
+    <p>Test passes if the entire box below is green</p>
+    <div id="test"></div>
+    <script type="text/javascript">
+      var container = document.getElementById('test');
+      for (var i=0; i!=400; i++) {
+        var element = document.createElement('div');
+        container.appendChild(element);
+      }
+    </script>
+  </body>
+</html>

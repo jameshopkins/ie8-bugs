@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>CSS Test: </title>
+    <link rel="help" href="http://www.w3.org/TR/CSS2/visudet.html#min-max-widths" />
+    <style>
+      div {
+        float: left;
+      }
+      img {
+        max-width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Only-child replaced element (with explicit dimensions, and max-width percentage value) within a floated parent, isn't rendered</h1>
+    <p>Test passes if there's a green box below</p>
+    <div id="test">
+      <img src="../assets/1x1-green.png" width="100" height="100" alt="">
+    </div>
+  </body>
+</html>

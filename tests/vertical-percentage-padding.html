@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>CSS Test: Percentage padding</title>
+    <style type="text/css">
+      #test{
+      	width: 400px;
+      	background: red;
+      	border: 1px solid black;
+      }
+      #test > div {
+        background: yellow;
+        padding-top: 10%;
+      }
+      #test > div > div {
+        margin-top: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Vertical margin of child element, whose parent has a percentage-based <code>padding</code> value in the same direction, is ignored and instead applied to the aforementioned parent element</h1>
+    <p>Test passes if there's no red in the box below</p>
+    <div id="test">
+      <div>
+        <div>
+          TEST
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

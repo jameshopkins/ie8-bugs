@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <html>
+  <head>
+  <title>CSS Test: Visibility inheritance</title>
+  <link rel="help" href="http://www.w3.org/TR/CSS21/visufx.html#visibility" />
+  <style type="text/css">
+    #test{
+      visibility: hidden;
+    }
+    #test div{
+      background: green;
+      display: inline;
+      visibility: visible;
+    }
+  </style>
+  </head>
+  <body>
+    <h1><code>visibility:visible</code> applied to inline box doesn't override inherited <code>visibility:hidden</code> value applied to it's block-level parent</h1>
+    <p>Test passes if there's a green box with 'TEST' below</p>
+    <div id="test">
+        <div>TEST</div>
+      </div>
+    </div>
+  </body>
+</html>

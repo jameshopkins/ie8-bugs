@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>CSS Test: </title>
+    <meta name="flags" content="interact" />
+    <style type="text/css">
+      #collapse-one {
+        margin: 0;
+        background: yellow;
+      }
+      #collapse-two {
+        margin-top: 150px;
+        background: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Intermittent margin collapse of last sibling element upon selecting system text within preceding same-type sibling</h1>
+    <p>Test passes if when selecting and highlighting the first five list-items below, and slowly moving onto the sixth (yellow-coloured) one, no margin collapsing is observed between the two yellow boxes.</p>
+    <ul>
+    <li>TEST</li>
+    <li>TEST</li>
+    <li>TEST</li>
+    <li>TEST</li>
+    <li>TEST</li>
+    <li>
+    <div id="collapse-one">
+      TEST
+    </div>
+    <div id="collapse-two">
+      TEST
+    </div>
+    </li>
+    </ul>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>CSS Test: Table cell percentage padding box</title>
+    <style type="text/css">
+      #test{
+      	display: table-cell;
+      	padding: 0 20%;
+      	background: blue;
+      	width:400px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Content box of 'table-cell' isn't recalculated to reflect a percentage 'padding' value applied to that element</h1>
+    <p>Test passes if the text within the blue box doesn't overflow into the white space surrounding it</p>
+    <div id="test">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ssss
+    </div>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>CSS Test: Generated content - dynamic attr() value</title>
+    <link rel="help" href="http://www.w3.org/TR/CSS21/generate.html#x18" />
+    <style type="text/css">
+      #test:after {
+        content: attr(title);
+      }
+    </style>
+    <script type="text/javascript">
+      function insertAttribute() {
+        document.getElementById('test').setAttribute('title', 'Test passed');
+      }
+    </script>
+  </head>
+  <body>
+  <h1><code>attr()</code> function doesn't return the value of an attribute when the attribute is dynamically inserted</h1>
+  <p>Test passes if when you click the button below, <em>'Test passed'</em> appears below it.</p>
+  <input type="button" onclick="insertAttribute()" value="Test">
+  <div id="test"></div>
+  </body>
+</html>

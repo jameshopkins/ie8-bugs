@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>CSS Test: Inline box descender space</title>
+    <meta name="flags" content="image interact" />
+    <meta name="assert" content="Descender space of an inline replaced element whose baseline aligns with the baseline of the parent box is drawn" />
+    <link rel="author" title="James Hopkins" href="https://github.com/jameshopkins" />
+    <link rel="help" href="http://www.w3.org/TR/CSS2/visudet.html#line-height" />
+    <link rel="help" href="http://www.w3.org/TR/CSS2/visudet.html#strut" />
+    <style type="text/css">
+      #test:hover {
+      	background:red;
+      }
+      #control {
+        display: block
+      }
+      img {
+        vertical-align: baseline
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Descender space of a strut generated from a replaced element is drawn on hover when the element's background color is initially transparent, and a background color value is set on hover, and when the document has a 'transitional' doctype declaration</h1>
+    <p>Test passes if when you hover over the image, the 'TEST' test does not move</p>
+    <span id="test"><img src="../assets/1x1-blue.jpeg" alt="" width="100" height="100"/></span>
+    <span id="control">TEST</span>
+  </body>
+</html>

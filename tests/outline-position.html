@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>CSS Test: Position at which an 'outline' is drawn</title>
+    <link rel="help" href="http://www.w3.org/TR/CSS21/ui.html#dynamic-outlines" />
+    <meta name="flags" content="interact" />
+    <meta name="assert" content="The outline may be drawn starting just outside the border edge." />
+    <style type="text/css">
+    a {
+    	display: block;
+    	font-size: 1em;
+    	border: solid 20px black;
+    	background:black;
+    	color:white;
+    }
+    </style>
+  </head>
+  <body>
+    <h1>Outline is drawn between content box and border box</h1>
+    <p>Test passes if upon click 'TEST' below, the generated outline doesn't appear in the black box.</p>
+    <a href="#">TEST</a>
+  </body>
+</html>

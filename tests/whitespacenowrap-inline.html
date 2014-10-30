@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+  	<title>CSS Test: Inline boxes with adjacent white-space text nodes - line break suppression</title>
+		<link rel="help" href="http://www.w3.org/TR/CSS2/text.html#white-space-prop" />
+  	<style type="text/css">
+			#test{
+				border:1px solid black;
+				width:350px;
+			}
+			span {
+				white-space:nowrap;
+			}
+		</style>
+	</head>
+  <body>
+    <h1>White-space text nodes between inline boxes are incorrectly suppressed when line breaks within the inline boxes are suppressed, and contain a text node and adjacent space character (U+0020) - which is first or last in the line box</h1>
+    <p>Test passes if box below contains two line boxes</p>
+    <div id="test">
+      <span>test </span>
+      <span>test </span>
+      <span>test </span>
+      <span>test </span>
+      <span>test </span>
+      <span>test </span>
+      <span>test </span>
+      <span>test </span>
+      <span>test </span>
+      <span>test </span>
+      <span>test </span>
+      <span>test </span>
+      <span>test </span>
+      <span>test </span>
+      <span>test </span>
+      <span>test </span>
+      <span>test </span>
+      <span>test </span>
+      <span>test </span>
+      <span>test </span>
+    </div>
+  </body>
+</html>
